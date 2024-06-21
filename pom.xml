@@ -35,9 +35,23 @@
     </properties>
 
     <dependencies>
+        <!--The mockito library has been added to be able to mock a data reader in the stats tests.-->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.12.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--The JUNIT parms library has been added to be able to test a number of number formats in one go.-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
             <version>5.8.0-M1</version>
             <scope>test</scope>
         </dependency>
