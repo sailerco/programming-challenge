@@ -21,12 +21,12 @@ public class CountryStats extends Stats {
     public String getHighestPopulationDensity() throws ParseException, IOException {
         readContent();
         String countryOfHighestDensity = null;
-        int highestDensity = 0;
+        double highestDensity = 0.0;
         for (int i = 1; i < fileContent.size(); i++) {
             Map<String, String> row = fileContent.get(i);
             int population = parseValue(row.get("Population"));
             int area = parseValue(row.get("Area (km²)"));
-            int currentDensity = population / area;
+            double currentDensity = (double) population / area;
             if (currentDensity > highestDensity) {
                 countryOfHighestDensity = row.get("Name");
                 highestDensity = currentDensity;

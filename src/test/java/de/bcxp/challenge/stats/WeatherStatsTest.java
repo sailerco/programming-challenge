@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -27,7 +28,7 @@ class WeatherStatsTest {
     }
 
     @Test
-    void getSmallestTempSpreadTest() throws IOException {
+    void getSmallestTempSpreadTest() throws IOException, ParseException {
         assertEquals("1", stats.getSmallestTempSpread());
     }
 }

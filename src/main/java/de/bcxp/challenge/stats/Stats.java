@@ -18,14 +18,15 @@ public class Stats {
     }
 
     /**
-     * reads a file, if it hasn't been read before
+     * Reads a file, if it hasn't been read before.
      */
     void readContent() throws IOException {
         if (fileContent == null) fileContent = file.readFile();
     }
 
     /**
-     * parses numbers into integer whilst considering the number format
+     * Parses number strings into integer whilst considering the detected locale number format.
+     * This is a safer way than just using Integer.parseInt() because the numbers could be in different formats.
      *
      * @param numberStr the string to parse into an int
      * @return the int value that was parsed
@@ -38,7 +39,7 @@ public class Stats {
     }
 
     /**
-     * this method checks if the number format is in english or german convention
+     * This method checks if the number format is in US or german number format convention.
      *
      * @param numberStr the string whose Locale type should be detected
      * @return detected Locale type of the number string

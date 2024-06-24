@@ -50,14 +50,14 @@ public class CsvReader implements DataFileReader {
                 fileContent.add(rowMap);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            LOGGER.log(Level.SEVERE, "The file doesn't match the CSV row-column format");
+            LOGGER.log(Level.SEVERE, "The provided CSV file seems broken or is invalid.");
         }
 
         return fileContent;
     }
 
     /**
-     * sets the header and logs a warning if it doesn't contain numbers
+     * Sets the header and logs a warning if it doesn't contain a single letter.
      *
      * @param headerLine the first row read by the buffered reader
      */
